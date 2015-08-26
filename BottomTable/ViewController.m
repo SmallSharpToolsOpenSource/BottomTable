@@ -114,6 +114,10 @@
 
     // top inset = table view height - top position of last cell - last cell height
     CGFloat topInset = MAX(CGRectGetHeight(self.tableView.frame) - lastCellFrame.origin.y - CGRectGetHeight(lastCellFrame), 0);
+    
+    // What about this way? (Did not work when tested)
+    // CGFloat topInset = MAX(CGRectGetHeight(self.tableView.frame) - self.tableView.contentSize.height, 0);
+    
     NSLog(@"top inset: %f", topInset);
     
     UIEdgeInsets contentInset = tableView.contentInset;
